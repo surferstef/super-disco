@@ -1,3 +1,10 @@
+//Define DateTimestamp for today
+$("#currentDay").text(moment().format("MMM Do YYYY hh:mm:ss"));
+
+
+
+
+
 // $(".row").on("click", "p", function() {
 //     var text = $(this)
 //     .text()
