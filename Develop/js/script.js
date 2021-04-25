@@ -10,7 +10,8 @@ $("#currentDay").text(moment().format("MMMM Do YYYY hh:mm:ss a"));
         var descriptionText = $("<textarea>")
             .attr("class", "description")
             .val()
-            .text();
+            .text()
+            .trim();
         
             localStorage.setItem(currentHour, descriptionText);
     })
@@ -31,8 +32,10 @@ $("#currentDay").text(moment().format("MMMM Do YYYY hh:mm:ss a"));
     function hours() {
         var currentMoment = moment().hour();
          $(".hour-block").each(function () {
+            
             var blockTime = parseInt($(this)
                 .attr("id").split("hour")[1]);
+            //localStorage.setItem($(this), JSON.stringify(hour));
             //JSON.parse(localStorage.getItem($(this).attr("id").split("hour")[1]));  
             if (blockTime < currentMoment) {
                 $(this).addClass("past");
@@ -46,9 +49,9 @@ $("#currentDay").text(moment().format("MMMM Do YYYY hh:mm:ss a"));
                 $(this).removeClass("present");
                      $(this).removeClass("past");
                      $(this).addClass("future");
-            }
-        })
-    }
+                  }
+               })
+         }
     hours();
 
 
