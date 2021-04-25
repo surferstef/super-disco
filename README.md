@@ -27,4 +27,4 @@ Link to Deployed Application: https://surferstef.github.io/super-disco/
 
 
 ## Screenshot
-![Application Screenshot]("Screenshot of Application")
+![Application Screenshot](WorkdaySched-Screenshot "Screenshot of Application")
